@@ -1,7 +1,24 @@
 import type { AppProps } from 'next/app';
-import '../styles/globals.css';
+import PageWithLayoutType from '@/types/pageWithLayout';
+import DefaultPageLayout from '@/components/layouts/main';
+import { ThemeUI } from '@/ui/Theme';
+import '@/styles/globals.css';
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+type AppLayoutProps = AppProps & {
+  Component: PageWithLayoutType;
+  pageProps: any;
+};
+
+function MyApp({ Component, pageProps }: AppLayoutProps) {
+  const PageLayout = Component.layout || DefaultPageLayout;
+
+  return (
+    <ThemeUI>
+      <PageLayout>
+        <Component {...pageProps} />
+      </PageLayout>
+    </ThemeUI>
+  );
 }
+
 export default MyApp;

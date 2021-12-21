@@ -1,5 +1,5 @@
 {
-  "name": "template-nextjs",
+  "name": "truenorth-template-nextjs",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "next": "latest",
+    "next-themes": "^0.0.15",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },

@@ -1,64 +1,115 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Link from 'next/link';
+import { Alert } from '@/ui/Alert';
 
-const Home: NextPage = () => {
+const Page: NextPage = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <article>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Welcome</title>
       </Head>
 
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
-
-        <p className="mt-3 text-2xl">
-          Get started by editing <code className="p-3 font-mono text-lg bg-gray-100 rounded-md">pages/index.js</code>
-        </p>
-
-        <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
-          <a href="https://nextjs.org/docs" className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600">
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600">
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a href="https://github.com/vercel/next.js/tree/master/examples" className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600">
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">Instantly deploy your Next.js site to a public URL with Vercel.</p>
-          </a>
-        </div>
-      </main>
-
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-        <a
-          className="flex items-center justify-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
+      <h1 className="text-6xl font-bold">
+        Welcome to{' '}
+        <a className="text-blue-600" href="https://mate-ui.truenorth.co">
+          Mate-UI
         </a>
-      </footer>
-    </div>
+      </h1>
+
+      <p className="mt-3 text-2xl">A ready to use Figma, Next.js and TailwindCSS template built for Sprint-01</p>
+
+      <Alert type="warning" className="my-12">
+        <strong>Heads up!</strong> This is a{' '}
+        <a className="underline" href="https://github.com/truenorth-tech/template-nextjs">
+          template
+        </a>
+        .
+      </Alert>
+
+      <div className="grid md:grid-cols-2 gap-8 my-12">
+        <Link href="/docs/sprint-zero">
+          <a className="p-6 text-left border rounded-xl hover:text-blue-600 focus:text-blue-600">
+            <h3 className="text-2xl font-bold">👋 Sprint Zero</h3>
+            <p className="mt-4 text-xl">Getting started templates and playbook.</p>
+          </a>
+        </Link>
+
+        <div className="p-6 text-left border rounded-xl ">
+          <h3 className="text-2xl font-bold">🩺 Health-check</h3>
+          <p className="mt-4 text-xl">
+            <Link href="#">
+              <a className="hover:text-blue-600 focus:text-blue-600">Env</a>
+            </Link>
+            ,{' '}
+            <Link href="#">
+              <a className="hover:text-blue-600 focus:text-blue-600">SSG</a>
+            </Link>
+            ,{' '}
+            <Link href="#">
+              <a className="hover:text-blue-600 focus:text-blue-600">ISR</a>
+            </Link>
+            ,{' '}
+            <Link href="#">
+              <a className="hover:text-blue-600 focus:text-blue-600">SSR</a>
+            </Link>
+            ,{' '}
+            <Link href="#">
+              <a className="hover:text-blue-600 focus:text-blue-600">CSR</a>
+            </Link>
+            ,{' '}
+            <a href="/api/health-check" className="hover:text-blue-600 focus:text-blue-600">
+              API
+            </a>
+            ...
+          </p>
+        </div>
+
+        <Link href="/docs/basic-components">
+          <a className="p-6 text-left border rounded-xl hover:text-blue-600 focus:text-blue-600">
+            <h3 className="text-2xl font-bold">🧩 Basic Components</h3>
+            <p className="mt-4 text-xl">Alert, Avatar, Badge, Button, Dropdown, Input, Select, Table, Toggle, ToggleMode, Theme....</p>
+          </a>
+        </Link>
+
+        <Link href="/docs/custom-components">
+          <a className="p-6 text-left border rounded-xl hover:text-blue-600 focus:text-blue-600">
+            <h3 className="text-2xl font-bold">🦄 Custom Components</h3>
+            <p className="mt-4 text-xl">What if the client &quot;needs a Unicorn&quot; in the middle of a table...</p>
+          </a>
+        </Link>
+
+        <a href="https://nextjs.org/docs" className="p-6 text-left border rounded-xl hover:text-blue-600 focus:text-blue-600">
+          <h3 className="text-2xl font-bold">📓 Next.js &rarr;</h3>
+          <p className="mt-4 text-xl">Find in-depth information about Next.js features and API.</p>
+        </a>
+
+        <a
+          href="https://tailwindcss.com/docs/utility-first"
+          className="p-6 text-left border rounded-xl hover:text-blue-600 focus:text-blue-600"
+        >
+          <h3 className="text-2xl font-bold">📓 TailwindCSS &rarr;</h3>
+          <p className="mt-4 text-xl">A utility-first CSS framework to build any design, directly in your markup.</p>
+        </a>
+
+        <a
+          href="https://github.com/vercel/next.js/tree/master/examples"
+          className="p-6 text-left border rounded-xl hover:text-blue-600 focus:text-blue-600"
+        >
+          <h3 className="text-2xl font-bold">🤓 Examples &rarr;</h3>
+          <p className="mt-4 text-xl">Learn by example with this Next.js community projects.</p>
+        </a>
+
+        <a
+          href="https://github.com/vercel/next.js/tree/master/examples"
+          className="p-6 text-left border border-dashed rounded-xl hover:text-blue-600 focus:text-blue-600"
+        >
+          <h3 className="text-2xl font-bold">💬 Collaborate &rarr;</h3>
+          <p className="mt-4 text-xl">Report Issues, Request Features.</p>
+        </a>
+      </div>
+    </article>
   );
 };
 
-export default Home;
+export default Page;
