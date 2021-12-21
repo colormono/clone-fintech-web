@@ -3,8 +3,6 @@ import defaultTheme from '@/styles/ui-theme';
 
 interface ThemeContextInterface {
   theme: any;
-  mode?: Mode;
-  toggleMode?: any;
 }
 
 export const ThemeContext = React.createContext<ThemeContextInterface>({ theme: defaultTheme });
