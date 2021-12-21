@@ -1,7 +1,8 @@
-import type { NextPage } from 'next';
+// import type { NextPage } from 'next';
+import type { PageWithLayoutType } from '@/types/pageWithLayout';
 import Layout from '@/components/layouts/admin';
 
-const Page: NextPage = () => {
+const Page: PageWithLayoutType = () => {
   return (
     <article>
       <h1>Admin Layout</h1>

@@ -58,9 +58,9 @@ const Page: NextPage = () => {
               <a className="hover:text-blue-600 focus:text-blue-600">CSR</a>
             </Link>
             ,{' '}
-            <a href="/api/health-check" className="hover:text-blue-600 focus:text-blue-600">
-              API
-            </a>
+            <Link href="/api/health-check">
+              <a className="hover:text-blue-600 focus:text-blue-600">API</a>
+            </Link>
             ...
           </p>
         </div>
