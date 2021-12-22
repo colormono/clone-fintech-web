@@ -15,9 +15,9 @@ npm run dev
 
 # Docs
 
-- [Create a UI Package](/docs/ui-package.md)
 - [Basic UI components](/docs/basic-ui-components.md)
 - [Custom UI components](/docs/custom-ui-components.md)
+- [Create a UI Package](/docs/ui-package.md)
 - [API Mocking](/docs/mocking.md)
 - [Authentication](/docs/authentication.md)
 - [State management](/docs/state-management.md)
