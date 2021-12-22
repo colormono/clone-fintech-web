@@ -3,8 +3,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { Person, people } from './data';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse<Person>) {
-  if (req.method === 'POST') {
-    // Process a POST request
+  if (req.method === 'GET') {
+    // Process a GET request
     res.status(200).json(people);
   } else {
     // Handle any other HTTP method

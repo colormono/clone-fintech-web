@@ -17,7 +17,7 @@ const Page: NextPage = () => {
         </a>
       </h1>
 
-      <p className="mt-3 text-2xl">A ready to use Figma, Next.js and TailwindCSS template built for Sprint-01</p>
+      <p className="mt-3 text-2xl">A ready to use Figma, Next.js and TailwindCSS template built for Sprint-0.5</p>
 
       <Alert type="warning" className="my-12">
         <strong>Heads up!</strong> This is a{' '}
@@ -58,9 +58,9 @@ const Page: NextPage = () => {
               <a className="hover:text-blue-600 focus:text-blue-600">CSR</a>
             </Link>
             ,{' '}
-            <Link href="/api/health-check">
-              <a className="hover:text-blue-600 focus:text-blue-600">API</a>
-            </Link>
+            <a href="/api/health-check" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 focus:text-blue-600">
+              API
+            </a>
             ...
           </p>
         </div>
@@ -101,7 +101,7 @@ const Page: NextPage = () => {
         </a>
 
         <a
-          href="https://github.com/vercel/next.js/tree/master/examples"
+          href="https://github.com/truenorth-tech/template-nextjs/issues"
           className="p-6 text-left border border-dashed rounded-xl hover:text-blue-600 focus:text-blue-600"
         >
           <h3 className="text-2xl font-bold">💬 Collaborate &rarr;</h3>
