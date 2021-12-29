@@ -58,7 +58,12 @@ const Page: NextPage = () => {
               <a className="hover:text-blue-600 focus:text-blue-600">CSR</a>
             </Link>
             ,{' '}
-            <a href="/api/health-check" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 focus:text-blue-600">
+            <a
+              href="https://truenorth-template-nextjs.netlify.app/api/health-check"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-600 focus:text-blue-600"
+            >
               API
             </a>
             ...
