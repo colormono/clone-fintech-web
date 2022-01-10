@@ -1,8 +1,8 @@
 import { NextPage } from 'next';
 import type { ReactElement } from 'react';
-import MainLayout from '@/components/layouts/main';
-import AdminLayout from '@/components/layouts/admin';
-import EmptyLayout from '@/components/layouts/empty';
+import MainLayout from '@/layouts/main';
+import AdminLayout from '@/layouts/admin';
+import EmptyLayout from '@/layouts/empty';
 
 export type PageWithMainLayoutType = NextPage & { layout: typeof MainLayout };
 

@@ -1,6 +1,6 @@
 // import type { NextPage } from 'next';
 import type { PageWithLayoutType } from '@/types/pageWithLayout';
-import Layout from '@/components/layouts/admin';
+import Layout from '@/layouts/admin';
 
 const Page: PageWithLayoutType = () => {
   return (

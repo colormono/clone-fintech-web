@@ -1,6 +1,6 @@
 import type { AppProps } from 'next/app';
 import PageWithLayoutType from '@/types/pageWithLayout';
-import DefaultPageLayout from '@/components/layouts/main';
+import DefaultPageLayout from '@/layouts/main';
 import { ThemeUI } from '@/ui/Theme';
 import '@/styles/globals.css';
 
