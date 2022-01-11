@@ -1,4 +1,4 @@
-import { navigation } from './FooterNav';
+import { navigation } from "./FooterNav";
 
 export function Footer() {
   return (

@@ -1,4 +1,10 @@
-import Document, { DocumentContext, Html, Head, Main, NextScript } from 'next/document';
+import Document, {
+  DocumentContext,
+  Html,
+  Head,
+  Main,
+  NextScript,
+} from "next/document";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -12,7 +18,10 @@ class MyDocument extends Document {
       <Html>
         <Head>
           {/* Font Optimization: https://nextjs.org/docs/basic-features/font-optimization */}
-          <link href="https://fonts.googleapis.com/css2?family=Inter&display=optional" rel="stylesheet" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Inter&display=optional"
+            rel="stylesheet"
+          />
         </Head>
         <body>
           <Main />

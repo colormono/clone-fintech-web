@@ -1,4 +1,4 @@
-import type { LayoutProps } from '@/types/pageWithLayout';
+import type { LayoutProps } from "@/types/pageWithLayout";
 
 const EmptyLayout: LayoutProps = ({ children }) => {
   return children;

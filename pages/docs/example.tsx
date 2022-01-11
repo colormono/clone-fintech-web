@@ -1,6 +1,6 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import { Alert } from '@/components/ui';
+import type { NextPage } from "next";
+import Head from "next/head";
+import { Alert } from "@/components/ui";
 
 const Page: NextPage = () => {
   return (
@@ -17,8 +17,8 @@ const Page: NextPage = () => {
         title="Title"
         message="Message"
         actionLabel="Go"
-        onAction={() => alert('Hello, world!')}
-        onClose={() => alert('Close this modal with useState')}
+        onAction={() => alert("Hello, world!")}
+        onClose={() => alert("Close this modal with useState")}
       />
       <h2>Type</h2>
       <Alert type="primary">MateUI-React Library documentation</Alert>

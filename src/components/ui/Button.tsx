@@ -1,13 +1,13 @@
-import classNames from 'classnames';
-import React, { ReactNode, useContext } from 'react';
-import { ThemeContext } from './theme';
+import classNames from "classnames";
+import React, { ReactNode, useContext } from "react";
+import { ThemeContext } from "./theme";
 
-import warn from './utils/warning';
+import warn from "./utils/warning";
 
 type IconType =
   | string
-  | React.FunctionComponent<{ className: string; 'aria-hidden': boolean }>
-  | React.ComponentClass<{ className: string; 'aria-hidden': boolean }>;
+  | React.FunctionComponent<{ className: string; "aria-hidden": boolean }>
+  | React.ComponentClass<{ className: string; "aria-hidden": boolean }>;
 
 export interface Props {
   children?: React.ReactNode;
@@ -18,7 +18,7 @@ export interface Props {
   /**
    * The size of the button
    */
-  size?: 'larger' | 'large' | 'regular' | 'small' | 'pagination';
+  size?: "larger" | "large" | "regular" | "small" | "pagination";
   /**
    * Shows only one icon inside the button; defaults to left
    */
@@ -34,44 +34,53 @@ export interface Props {
   /**
    * The style of the button
    */
-  layout?: 'outline' | 'link' | 'primary' | '__dropdownItem';
+  layout?: "outline" | "link" | "primary" | "__dropdownItem";
   /**
    * Shows the button as a block (full width)
    */
   block?: boolean;
 }
 
-export interface ButtonAsButtonProps extends Props, React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonAsButtonProps
+  extends Props,
+    React.ButtonHTMLAttributes<HTMLButtonElement> {
   /**
    * The element that should be rendered as a button
    */
-  tag?: 'button';
+  tag?: "button";
   /**
    * The native HTML button type
    */
-  type?: 'button' | 'submit' | 'reset';
+  type?: "button" | "submit" | "reset";
 }
 
-export interface ButtonAsAnchorProps extends Props, React.AnchorHTMLAttributes<HTMLAnchorElement> {
-  tag: 'a';
+export interface ButtonAsAnchorProps
+  extends Props,
+    React.AnchorHTMLAttributes<HTMLAnchorElement> {
+  tag: "a";
 }
 
-export interface ButtonAsOtherProps extends Props, React.AnchorHTMLAttributes<HTMLAnchorElement> {
+export interface ButtonAsOtherProps
+  extends Props,
+    React.AnchorHTMLAttributes<HTMLAnchorElement> {
   tag: string;
 }
 
-export type ButtonProps = ButtonAsButtonProps | ButtonAsAnchorProps | ButtonAsOtherProps;
+export type ButtonProps =
+  | ButtonAsButtonProps
+  | ButtonAsAnchorProps
+  | ButtonAsOtherProps;
 
 type Ref = ReactNode | HTMLElement | string;
 
 const Button = React.forwardRef<Ref, ButtonProps>(function Button(props, ref) {
   const {
-    tag = 'button',
+    tag = "button",
     // Fix https://github.com/estevanmaito/windmill-react-ui/issues/7
-    type = tag === 'button' ? 'button' : undefined,
+    type = tag === "button" ? "button" : undefined,
     disabled = false,
-    size = 'regular',
-    layout = 'primary',
+    size = "regular",
+    layout = "primary",
     block = false,
     icon,
     iconLeft,
@@ -89,8 +98,8 @@ const Button = React.forwardRef<Ref, ButtonProps>(function Button(props, ref) {
   }
 
   warn(
-    hasIcon() && !other['aria-label'] && !children,
-    'Button',
+    hasIcon() && !other["aria-label"] && !children,
+    "Button",
     'You are using an icon button, but no "aria-label" attribute was found. Add an "aria-label" attribute to work as a label for screen readers.'
   );
 
@@ -141,7 +150,7 @@ const Button = React.forwardRef<Ref, ButtonProps>(function Button(props, ref) {
   const dropdownItemStyle = button.dropdownItem.base;
 
   const buttonStyles =
-    layout === '__dropdownItem'
+    layout === "__dropdownItem"
       ? classNames(dropdownItemStyle, className)
       : classNames(
           baseStyle,
@@ -157,8 +166,14 @@ const Button = React.forwardRef<Ref, ButtonProps>(function Button(props, ref) {
           className
         );
 
-  const iconLeftStyles = classNames(iconStyle, children ? button.icon.left : '');
-  const iconRightStyles = classNames(iconStyle, children ? button.icon.right : '');
+  const iconLeftStyles = classNames(
+    iconStyle,
+    children ? button.icon.left : ""
+  );
+  const iconRightStyles = classNames(
+    iconStyle,
+    children ? button.icon.right : ""
+  );
 
   return React.createElement(
     tag,
@@ -169,9 +184,19 @@ const Button = React.forwardRef<Ref, ButtonProps>(function Button(props, ref) {
       type,
       ...other,
     },
-    IconLeft ? React.createElement(IconLeft, { className: iconLeftStyles, 'aria-hidden': true }) : null,
+    IconLeft
+      ? React.createElement(IconLeft, {
+          className: iconLeftStyles,
+          "aria-hidden": true,
+        })
+      : null,
     children,
-    IconRight ? React.createElement(IconRight, { className: iconRightStyles, 'aria-hidden': true }) : null
+    IconRight
+      ? React.createElement(IconRight, {
+          className: iconRightStyles,
+          "aria-hidden": true,
+        })
+      : null
   );
 });
 

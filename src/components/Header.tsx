@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import { ToggleMode } from '@/components/ui';
+import Link from "next/link";
+import { ToggleMode } from "@/components/ui";
 // import { navigation } from './navigation';
 
 export function Header() {

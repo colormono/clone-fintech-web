@@ -1,8 +1,8 @@
-import React, { useContext } from 'react';
-import classNames from 'classnames';
-import { ThemeContext } from './theme';
+import React, { useContext } from "react";
+import classNames from "classnames";
+import { ThemeContext } from "./theme";
 
-export interface InputProps extends React.ComponentPropsWithRef<'input'> {
+export interface InputProps extends React.ComponentPropsWithRef<"input"> {
   /**
    * Defines the color of the input
    */
@@ -17,8 +17,11 @@ export interface InputProps extends React.ComponentPropsWithRef<'input'> {
   type?: string;
 }
 
-const Input = React.forwardRef<HTMLInputElement, InputProps>(function Input(props, ref) {
-  const { valid, disabled, className, type = 'text', ...other } = props;
+const Input = React.forwardRef<HTMLInputElement, InputProps>(function Input(
+  props,
+  ref
+) {
+  const { valid, disabled, className, type = "text", ...other } = props;
 
   const {
     theme: { input },
@@ -40,14 +43,14 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(function Input(prop
     if (hasValidation(valid)) {
       return valid ? validStyle : invalidStyle;
     }
-    return '';
+    return "";
   }
 
   function typeStyle(type: string): string {
     switch (type) {
-      case 'radio':
+      case "radio":
         return radioStyle;
-      case 'checkbox':
+      case "checkbox":
         return checkStyle;
       default:
         return baseStyle;
@@ -64,7 +67,15 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(function Input(prop
     className
   );
 
-  return <input className={cls} type={type} ref={ref} disabled={disabled} {...other} />;
+  return (
+    <input
+      className={cls}
+      type={type}
+      ref={ref}
+      disabled={disabled}
+      {...other}
+    />
+  );
 });
 
 export default Input;

@@ -3,25 +3,32 @@
  * Check the latest version at:
  *  https://mate-ui.truenorth.co
  */
-import React, { useContext } from 'react';
-import classNames from 'classnames';
-import { ThemeContext } from './theme';
-import { CloseIcon, NeutralIcon, SuccessIcon, WarningIcon, ErrorIcon, InfoIcon } from './Icons';
+import React, { useContext } from "react";
+import classNames from "classnames";
+import { ThemeContext } from "./theme";
+import {
+  CloseIcon,
+  NeutralIcon,
+  SuccessIcon,
+  WarningIcon,
+  ErrorIcon,
+  InfoIcon,
+} from "./Icons";
 
 enum Type {
-  primary = 'primary',
-  secondary = 'secondary',
-  success = 'success',
-  error = 'error',
-  warning = 'warning',
-  info = 'info',
-  neutral = 'neutral',
+  primary = "primary",
+  secondary = "secondary",
+  success = "success",
+  error = "error",
+  warning = "warning",
+  info = "info",
+  neutral = "neutral",
 }
 
 enum Size {
-  sm = 'sm',
-  md = 'md',
-  lg = 'lg',
+  sm = "sm",
+  md = "md",
+  lg = "lg",
 }
 
 export interface AlertProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -70,8 +77,8 @@ export interface AlertProps extends React.HTMLAttributes<HTMLDivElement> {
 const Alert: React.FC<AlertProps> = ({
   className,
   children,
-  type = 'neutral',
-  size = 'md',
+  type = "neutral",
+  size = "md",
   showIcon = true,
   icon,
   title,
@@ -88,19 +95,19 @@ const Alert: React.FC<AlertProps> = ({
   let AlertIcon = (icon as any) || null;
   if (!AlertIcon) {
     switch (type) {
-      case 'success':
+      case "success":
         AlertIcon = SuccessIcon;
         break;
-      case 'warning':
+      case "warning":
         AlertIcon = WarningIcon;
         break;
-      case 'error':
+      case "error":
         AlertIcon = ErrorIcon;
         break;
-      case 'info':
+      case "info":
         AlertIcon = InfoIcon;
         break;
-      case 'neutral':
+      case "neutral":
         AlertIcon = NeutralIcon;
         break;
       default:
@@ -132,11 +139,30 @@ const Alert: React.FC<AlertProps> = ({
   const closeTypeStyle = alert.close[type];
   const closeSizeStyle = alert.close[size];
 
-  const cls = classNames(baseStyle, typeStyle, sizeStyle, className, 'mateui-alert flex justify-between items-start');
+  const cls = classNames(
+    baseStyle,
+    typeStyle,
+    sizeStyle,
+    className,
+    "mateui-alert flex justify-between items-start"
+  );
   const iconCls = classNames(iconBaseStyle, iconTypeStyle, iconSizeStyle);
-  const titleCls = classNames(titleBaseStyle, titleTypeStyle, titleSizeStyle, message || children ? 'mb-1' : '');
-  const messageCls = classNames(messageBaseStyle, messageTypeStyle, messageSizeStyle);
-  const actionCls = classNames(inlineActionBaseStyle, inlineActionTypeStyle, inlineActionSizeStyle);
+  const titleCls = classNames(
+    titleBaseStyle,
+    titleTypeStyle,
+    titleSizeStyle,
+    message || children ? "mb-1" : ""
+  );
+  const messageCls = classNames(
+    messageBaseStyle,
+    messageTypeStyle,
+    messageSizeStyle
+  );
+  const actionCls = classNames(
+    inlineActionBaseStyle,
+    inlineActionTypeStyle,
+    inlineActionSizeStyle
+  );
   const closeCls = classNames(closeBaseStyle, closeTypeStyle, closeSizeStyle);
 
   return (
@@ -144,10 +170,18 @@ const Alert: React.FC<AlertProps> = ({
       {showIcon && AlertIcon ? <AlertIcon className={iconCls} /> : null}
       <div className="flex-1">
         {title ? <div className={titleCls}>{title}</div> : null}
-        {message && !children ? <div className={messageCls}>{message}</div> : <div>{children}</div> || null}
+        {message && !children ? (
+          <div className={messageCls}>{message}</div>
+        ) : (
+          <div>{children}</div> || null
+        )}
       </div>
       {onAction && (
-        <button onClick={onAction} aria-label="inline-action" className={actionCls}>
+        <button
+          onClick={onAction}
+          aria-label="inline-action"
+          className={actionCls}
+        >
           {actionLabel}
         </button>
       )}

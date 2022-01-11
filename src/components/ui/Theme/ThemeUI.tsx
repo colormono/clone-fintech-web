@@ -1,6 +1,6 @@
-import React from 'react';
-import { ThemeProvider } from 'next-themes';
-import { ThemeContext, defaultTheme } from './';
+import React from "react";
+import { ThemeProvider } from "next-themes";
+import { ThemeContext, defaultTheme } from "./";
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;

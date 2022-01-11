@@ -1,8 +1,8 @@
-import Head from 'next/head';
-import type { LayoutProps } from '@/types/pageWithLayout';
-import { Container } from '@/components/ui';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import Head from "next/head";
+import type { LayoutProps } from "@/types/pageWithLayout";
+import { Container } from "@/components/ui";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const MainLayout: LayoutProps = ({ children }) => {
   return (
