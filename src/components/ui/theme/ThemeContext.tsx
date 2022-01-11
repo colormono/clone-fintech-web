@@ -8,3 +8,4 @@ interface ThemeContextInterface {
 const ThemeContext = React.createContext<ThemeContextInterface>({ theme: defaultTheme });
 
 export default ThemeContext;
+
