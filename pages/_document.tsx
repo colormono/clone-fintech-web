@@ -11,6 +11,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          {/* Font Optimization: https://nextjs.org/docs/basic-features/font-optimization */}
           <link href="https://fonts.googleapis.com/css2?family=Inter&display=optional" rel="stylesheet" />
         </Head>
         <body>

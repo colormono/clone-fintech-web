@@ -1,17 +1,15 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { Alert } from '@/components/ui/Alert';
+import { Alert } from '@/components/ui';
 
 const Page: NextPage = () => {
   return (
     <article>
       <Head>
-        <title>Basic Components</title>
+        <title>Page Example</title>
       </Head>
 
-      <h1 className="text-6xl font-bold">
-        <span className="text-blue-600">Sprint Zero</span> Components
-      </h1>
+      <h1 className="text-6xl font-bold">Page Example</h1>
 
       <h2>Alert</h2>
       <Alert

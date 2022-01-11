@@ -5,11 +5,11 @@ const Page: NextPage = () => {
   return (
     <article>
       <Head>
-        <title>Env vars</title>
+        <title>Incremental Site Regeneration</title>
       </Head>
 
-      <h1 className="text-6xl font-bold">ENV</h1>
-      <p>Env vars</p>
+      <h1 className="text-6xl font-bold">SSR</h1>
+      <p>Incremental Site Regeneration</p>
     </article>
   );
 };

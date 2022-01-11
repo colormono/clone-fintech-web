@@ -5,7 +5,7 @@
  */
 import React, { useContext } from 'react';
 import classNames from 'classnames';
-import { ThemeContext } from '../Theme';
+import { ThemeContext } from './theme';
 import { CloseIcon, NeutralIcon, SuccessIcon, WarningIcon, ErrorIcon, InfoIcon } from './Icons';
 
 enum Type {
@@ -67,7 +67,7 @@ export interface AlertProps extends React.HTMLAttributes<HTMLDivElement> {
  * Alert is used to communicate the state or status of a
  * page, feature or action
  */
-export const Alert: React.FC<AlertProps> = ({
+const Alert: React.FC<AlertProps> = ({
   className,
   children,
   type = 'neutral',

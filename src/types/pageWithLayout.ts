@@ -1,6 +1,6 @@
 import { NextPage } from 'next';
 import type { ReactElement } from 'react';
-import MainLayout from '@/layouts/main';
+import MainLayout from '@/layouts/default';
 import AdminLayout from '@/layouts/admin';
 import EmptyLayout from '@/layouts/empty';
 

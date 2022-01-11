@@ -1,7 +1,8 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Alert } from '@/ui/Alert';
+import classNames from 'classnames';
+import { Heading, CustomLink } from '@/components/ui';
 
 const Page: NextPage = () => {
   return (
@@ -10,110 +11,115 @@ const Page: NextPage = () => {
         <title>Welcome</title>
       </Head>
 
-      <h1 className="text-6xl font-bold">
-        Welcome to{' '}
-        <a className="text-blue-600" href="https://mate-ui.truenorth.co">
-          Mate-UI
-        </a>
-      </h1>
+      <div className="my-12 max-w-lg">
+        <Heading type="h1">Hello</Heading>
+        {/* <Text className="mt-3 text-2xl">This is a ready to use Next.js and TailwindCSS template built for Sprint-01</Text> */}
+        <p className="mt-3 text-2xl">
+          This is a ready to use Next.js and TailwindCSS{' '}
+          <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-warning-100 relative inline-block">
+            <span className="relative text-black">template</span>
+          </span>{' '}
+          built for Sprint-01
+        </p>
+      </div>
 
-      <p className="mt-3 text-2xl">A ready to use Figma, Next.js and TailwindCSS template built for Sprint-0.5</p>
+      <div className="grid md:grid-cols-3 gap-8 my-16">
+        <Card title="👋 Getting started" description="How this template works, and how you can customize it." href="/docs" />
 
-      <Alert type="warning" className="my-12">
-        <strong>Heads up!</strong> This is a{' '}
-        <a className="underline" href="https://github.com/truenorth-tech/template-nextjs">
-          template
-        </a>
-        .
-      </Alert>
-
-      <div className="grid md:grid-cols-2 gap-8 my-12">
-        <Link href="/docs/sprint-zero">
-          <a className="p-6 text-left border rounded-xl hover:text-blue-600 focus:text-blue-600">
-            <h3 className="text-2xl font-bold">👋 Sprint Zero</h3>
-            <p className="mt-4 text-xl">Getting started templates and playbook.</p>
-          </a>
-        </Link>
-
-        <div className="p-6 text-left border rounded-xl ">
+        <div className="p-6 text-left border border-neutral-300  border-dashed rounded-xl col-span-2">
           <h3 className="text-2xl font-bold">🩺 Health-check</h3>
           <p className="mt-4 text-xl">
-            <Link href="#">
-              <a className="hover:text-blue-600 focus:text-blue-600">Env</a>
-            </Link>
-            ,{' '}
-            <Link href="#">
-              <a className="hover:text-blue-600 focus:text-blue-600">SSG</a>
-            </Link>
-            ,{' '}
-            <Link href="#">
-              <a className="hover:text-blue-600 focus:text-blue-600">ISR</a>
-            </Link>
-            ,{' '}
-            <Link href="#">
-              <a className="hover:text-blue-600 focus:text-blue-600">SSR</a>
-            </Link>
-            ,{' '}
-            <Link href="#">
-              <a className="hover:text-blue-600 focus:text-blue-600">CSR</a>
-            </Link>
-            ,{' '}
-            <a
-              href="https://truenorth-template-nextjs.netlify.app/api/health-check"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-blue-600 focus:text-blue-600"
-            >
-              API
-            </a>
+            <CustomLink href="/health-check/env">Env</CustomLink>, <CustomLink href="/health-check/ssg">SSG</CustomLink>,{' '}
+            <CustomLink href="/health-check/isr">ISR</CustomLink>, <CustomLink href="/health-check/ssr">SSR</CustomLink>,{' '}
+            <CustomLink href="/health-check/csr">CSR</CustomLink>,{' '}
+            <CustomLink href="https://truenorth-template-nextjs.netlify.app/api/health-check">API Routes</CustomLink>
             ...
           </p>
         </div>
 
-        <Link href="/docs/basic-components">
-          <a className="p-6 text-left border rounded-xl hover:text-blue-600 focus:text-blue-600">
-            <h3 className="text-2xl font-bold">🧩 Basic Components</h3>
-            <p className="mt-4 text-xl">Alert, Avatar, Badge, Button, Dropdown, Input, Select, Table, Toggle, ToggleMode, Theme....</p>
-          </a>
-        </Link>
+        <Card
+          title="🧩 UI Components"
+          description="Alert, Avatar, Badge, Button, Dropdown, Modal, Input, Label, Select, Table, Textarea, Toggle, ToggleMode..."
+          href="/docs/example"
+          className="col-span-2"
+        />
 
-        <Link href="/docs/custom-components">
-          <a className="p-6 text-left border rounded-xl hover:text-blue-600 focus:text-blue-600">
-            <h3 className="text-2xl font-bold">🦄 Custom Components</h3>
-            <p className="mt-4 text-xl">What if the client &quot;needs a Unicorn&quot; in the middle of a table...</p>
-          </a>
-        </Link>
+        <Card
+          title="🦄 Advanced"
+          description='What if the client "needs a Unicorn" in the middle of a table...'
+          href="https://mate-ui.truenorth.co/docs/advanced-components"
+        />
 
-        <a href="https://nextjs.org/docs" className="p-6 text-left border rounded-xl hover:text-blue-600 focus:text-blue-600">
-          <h3 className="text-2xl font-bold">📓 Next.js &rarr;</h3>
-          <p className="mt-4 text-xl">Find in-depth information about Next.js features and API.</p>
-        </a>
+        <Card title="📓 Next.js" description="Find in-depth information about Next.js features and API." href="https://nextjs.org/docs" />
 
-        <a
+        <Card
+          title="📓 TailwindCSS"
+          description="A utility-first CSS framework to build any design, directly in your markup."
           href="https://tailwindcss.com/docs/utility-first"
-          className="p-6 text-left border rounded-xl hover:text-blue-600 focus:text-blue-600"
-        >
-          <h3 className="text-2xl font-bold">📓 TailwindCSS &rarr;</h3>
-          <p className="mt-4 text-xl">A utility-first CSS framework to build any design, directly in your markup.</p>
-        </a>
+        />
 
-        <a
+        <Card
+          title="🤓 Examples"
+          description="Learn by example with these Next.js community projects."
           href="https://github.com/vercel/next.js/tree/master/examples"
-          className="p-6 text-left border rounded-xl hover:text-blue-600 focus:text-blue-600"
-        >
-          <h3 className="text-2xl font-bold">🤓 Examples &rarr;</h3>
-          <p className="mt-4 text-xl">Learn by example with this Next.js community projects.</p>
-        </a>
+        />
 
-        <a
+        <Card
+          title="💬 Collaborate"
+          description="Report Issues, Request Features."
           href="https://github.com/truenorth-tech/template-nextjs/issues"
-          className="p-6 text-left border border-dashed rounded-xl hover:text-blue-600 focus:text-blue-600"
-        >
-          <h3 className="text-2xl font-bold">💬 Collaborate &rarr;</h3>
-          <p className="mt-4 text-xl">Report Issues, Request Features.</p>
-        </a>
+          className="col-span-3 border-dashed"
+        />
       </div>
     </article>
+  );
+};
+
+export type CardProps = {
+  /**
+   * The variant type of the element
+   */
+  href?: string;
+  /**
+   * Defines the color of the helper text (the same as with Input, Select, etc.)
+   */
+  title?: string;
+  /**
+   * Defines the color of the helper text (the same as with Input, Select, etc.)
+   */
+  description?: string;
+  /**
+   * Defines the color of the helper text (the same as with Input, Select, etc.)
+   */
+  className?: string;
+};
+
+const Card = ({ href, title, description, className }: CardProps) => {
+  const cls = classNames(
+    'group p-6 text-left border border-neutral-300 rounded-xl hover:text-primary-600 focus:text-primary-600',
+    className
+  );
+
+  const isExternal = href.includes('http');
+
+  if (isExternal) {
+    return (
+      <a href={href} className={cls}>
+        <h3 className="text-2xl font-bold">
+          {title} <span className="group-hover:translate-x-2 inline-block transform duration-200 ease-in-out">&rarr;</span>
+        </h3>
+        <p className="mt-4 text-xl">{description}</p>
+      </a>
+    );
+  }
+
+  return (
+    <Link href={href}>
+      <a className={cls}>
+        <h3 className="text-2xl font-bold">{title}</h3>
+        <p className="mt-4 text-xl">{description}</p>
+      </a>
+    </Link>
   );
 };
 

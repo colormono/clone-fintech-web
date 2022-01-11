@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { Alert } from '@/components/ui/Alert';
+import { Alert } from '@/components/ui';
 
 const Page: NextPage = () => {
   return (
@@ -9,9 +9,7 @@ const Page: NextPage = () => {
         <title>Sprint Zero</title>
       </Head>
 
-      <h1 className="text-6xl font-bold">
-        <span className="text-blue-600">Sprint Zero</span> Components
-      </h1>
+      <h1 className="text-6xl font-bold">Getting Started</h1>
 
       <h2>Alert</h2>
       <Alert

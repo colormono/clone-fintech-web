@@ -5,10 +5,11 @@ const Page: NextPage = () => {
   return (
     <article>
       <Head>
-        <title>Sprint Zero</title>
+        <title>Client Side Rendering</title>
       </Head>
 
       <h1 className="text-6xl font-bold">CSR</h1>
+      <p>Client Side Rendering</p>
     </article>
   );
 };

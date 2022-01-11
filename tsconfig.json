@@ -3,7 +3,8 @@
     "baseUrl": "./",
     "paths": {
       "@/*": ["./src/*"],
-      "@/ui/*": ["src/components/ui/*"]
+      "@/ui": ["./src/components/ui"],
+      "@/ui/*": ["./src/components/ui/*"]
     },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
