@@ -10,3 +10,4 @@ const ThemeContext = React.createContext<ThemeContextInterface>({
 });
 
 export default ThemeContext;
+
