@@ -1,8 +1,8 @@
-import type { AppProps } from "next/app";
-import PageWithLayoutType from "@/types/pageWithLayout";
-import DefaultPageLayout from "@/layouts/default";
-import ThemeUI from "@/components/ui/theme/ThemeUI";
-import "@/styles/globals.css";
+import type { AppProps } from 'next/app';
+import PageWithLayoutType from '@/types/pageWithLayout';
+import DefaultPageLayout from '@/layouts/default';
+import ThemeUI from '@/components/ui/theme/ThemeUI';
+import '@/styles/globals.css';
 
 type AppLayoutProps = AppProps & {
   Component: PageWithLayoutType;
