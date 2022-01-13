@@ -46,7 +46,26 @@ const Page: NextPage = () => {
   );
 };
 
-const ColorItem = ({ name, shade, hex }) => {
+type ColorItemProps = {
+  /**
+   * The variant type of the element
+   */
+  name: string;
+  /**
+   * Defines the color of the helper text (the same as with Input, Select, etc.)
+   */
+  shade?: string;
+  /**
+   * Defines the color of the helper text (the same as with Input, Select, etc.)
+   */
+  hex: string;
+  /**
+   * Defines the color of the helper text (the same as with Input, Select, etc.)
+   */
+  className?: string;
+};
+
+const ColorItem = ({ name, shade, hex }: ColorItemProps) => {
   let bg = 'bg-' + name;
   if (shade) bg += '-' + shade;
 
