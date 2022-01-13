@@ -1,12 +1,7 @@
-import { Fragment, useEffect, useRef, useState } from "react";
-import { useTheme } from "next-themes";
-import { Menu, Transition } from "@headlessui/react";
-import {
-  ChevronDownIcon,
-  SunIcon,
-  MoonIcon,
-  DesktopComputerIcon,
-} from "@heroicons/react/outline";
+import { Fragment, useEffect, useRef, useState } from 'react';
+import { useTheme } from 'next-themes';
+import { Menu, Transition } from '@headlessui/react';
+import { ChevronDownIcon, SunIcon, MoonIcon, DesktopComputerIcon } from '@heroicons/react/outline';
 
 export const ToggleMode = () => {
   const { theme, setTheme } = useTheme();
@@ -22,10 +17,7 @@ export const ToggleMode = () => {
       <Menu as="div" className="relative">
         <Menu.Button className="inline-flex justify-center w-full px-2 py-2 text-sm font-medium rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
           <SunIcon className="w-5 h-5 dark:hidden" aria-hidden="true" />
-          <MoonIcon
-            className="w-5 h-5 hidden dark:inline-block"
-            aria-hidden="true"
-          />
+          <MoonIcon className="w-5 h-5 hidden dark:inline-block" aria-hidden="true" />
         </Menu.Button>
 
         <Transition
@@ -42,11 +34,9 @@ export const ToggleMode = () => {
               <Menu.Item>
                 {({ active }) => (
                   <button
-                    onClick={() => setTheme("light")}
+                    onClick={() => setTheme('light')}
                     className={`${
-                      active || theme === "light"
-                        ? "bg-neutral-500 text-white"
-                        : "text-gray-900"
+                      active || theme === 'light' ? 'bg-neutral-500 text-white' : 'text-gray-900 dark:text-white'
                     } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
                   >
                     <SunIcon className="w-5 h-5 mr-2" aria-hidden="true" />
@@ -57,11 +47,9 @@ export const ToggleMode = () => {
               <Menu.Item>
                 {({ active }) => (
                   <button
-                    onClick={() => setTheme("dark")}
+                    onClick={() => setTheme('dark')}
                     className={`${
-                      active || theme === "dark"
-                        ? "bg-neutral-500 text-white"
-                        : "text-gray-900"
+                      active || theme === 'dark' ? 'bg-neutral-500 text-white' : 'text-gray-900 dark:text-white'
                     } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
                   >
                     <MoonIcon className="w-5 h-5 mr-2" aria-hidden="true" />
@@ -72,17 +60,12 @@ export const ToggleMode = () => {
               <Menu.Item>
                 {({ active }) => (
                   <button
-                    onClick={() => setTheme("system")}
+                    onClick={() => setTheme('system')}
                     className={`${
-                      active || theme === "system"
-                        ? "bg-neutral-500 text-white"
-                        : "text-gray-900"
+                      active || theme === 'system' ? 'bg-neutral-500 text-white' : 'text-gray-900 dark:text-white'
                     } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
                   >
-                    <DesktopComputerIcon
-                      className="w-5 h-5 mr-2"
-                      aria-hidden="true"
-                    />
+                    <DesktopComputerIcon className="w-5 h-5 mr-2" aria-hidden="true" />
                     System
                   </button>
                 )}

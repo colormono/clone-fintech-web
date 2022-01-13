@@ -1,4 +1,5 @@
-import { navigation } from "./FooterNav";
+import { navigation } from './FooterNav';
+import { CustomLink } from './ui';
 
 export function Footer() {
   return (
@@ -14,14 +15,9 @@ export function Footer() {
 
       <div className="mt-8 md:mt-0 md:order-1">
         Powered by{` `}
-        <a
-          className="border-b hover:border-black"
-          href="https://truenorth.co?utm_source=template-nextjs&utm_medium=template-nextjs&utm_campaign=template-nextjs"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <CustomLink href="https://truenorth.co?utm_source=template-nextjs&utm_medium=template-nextjs&utm_campaign=template-nextjs">
           TrueNorth
-        </a>
+        </CustomLink>
       </div>
     </footer>
   );
