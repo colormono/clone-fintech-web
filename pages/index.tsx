@@ -9,6 +9,10 @@ const Page: NextPage = () => {
     <article>
       <Head>
         <title>Welcome</title>
+        <meta name="description" content="Checkout our cool page" key="desc" />
+        <meta property="og:title" content="Social Title for Cool Page" />
+        <meta property="og:description" content="And a social description for our cool page" />
+        <meta property="og:image" content="https://example.com/images/cool-page.jpg" />
       </Head>
 
       <div className="my-12 max-w-lg">
@@ -27,7 +31,7 @@ const Page: NextPage = () => {
         <Card title="👋 Getting started" description="How this template works, and how you can customize it." href="/docs" />
 
         <div className="p-6 text-left border border-neutral-300  border-dashed rounded-xl md:col-span-2">
-          <h3 className="text-2xl font-bold">🩺 Health-check</h3>
+          <h3 className="text-2xl font-bold">⛑ Health-check</h3>
           <p className="mt-4 text-xl">
             <CustomLink href="/health-check/ui">UI</CustomLink>, <CustomLink href="/health-check/env">Env</CustomLink>,{' '}
             <CustomLink href="/health-check/ssg">SSG</CustomLink>, <CustomLink href="/health-check/isr">ISR</CustomLink>,{' '}
