@@ -34,6 +34,7 @@ export const ToggleMode = () => {
               <Menu.Item>
                 {({ active }) => (
                   <button
+                    aria-label="Light mode"
                     onClick={() => setTheme('light')}
                     className={`${
                       active || theme === 'light' ? 'bg-neutral-500 text-white' : 'text-gray-900 dark:text-white'
@@ -47,6 +48,7 @@ export const ToggleMode = () => {
               <Menu.Item>
                 {({ active }) => (
                   <button
+                    aria-label="Dark mode"
                     onClick={() => setTheme('dark')}
                     className={`${
                       active || theme === 'dark' ? 'bg-neutral-500 text-white' : 'text-gray-900 dark:text-white'
@@ -60,6 +62,7 @@ export const ToggleMode = () => {
               <Menu.Item>
                 {({ active }) => (
                   <button
+                    aria-label="System default"
                     onClick={() => setTheme('system')}
                     className={`${
                       active || theme === 'system' ? 'bg-neutral-500 text-white' : 'text-gray-900 dark:text-white'

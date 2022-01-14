@@ -18,13 +18,13 @@ const Page: NextPage = () => {
       <div className="my-12 max-w-lg">
         <Heading type="h1">Hello</Heading>
         {/* <Text className="mt-3 text-2xl">This is a ready to use Next.js and TailwindCSS template built for Sprint-01</Text> */}
-        <p className="mt-3 text-2xl">
+        <h2 className="mt-3 text-2xl">
           This is a ready to use Next.js and TailwindCSS{' '}
           <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-warning-100 relative inline-block">
             <span className="relative text-black">template</span>
           </span>{' '}
           built for Sprint-01
-        </p>
+        </h2>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-16">
