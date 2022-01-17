@@ -15,26 +15,25 @@ const Page: NextPage = () => {
       <p>Check if the design token values match with the ones from the design system.</p>
 
       {theme.colors ? (
-        <div className="flex flex-col space-y-4 md:-mx-16">
+        <div className="flex flex-col space-y-4">
           {Object.entries(theme.colors).map(([key, value]) => {
             if (typeof value === 'string') {
               if (value === 'transparent') return null;
               return (
-                <div>
+                <div key={key} className="flex w-full items-center relative">
+                  <div className="w-32 absolute top-3 -left-32 uppercase text-xs tracking-wider">{key}</div>
                   <ColorItem key={key} name={key} hex={value} />
-                  <div className="mb-1 uppercase text-xs tracking-wider font-semibold">{key}</div>
                 </div>
               );
             }
+
             return (
-              <div key={key}>
-                <div className="flex w-full">
-                  {Object.entries(value).map(([keyChild, valueChild]) => {
-                    if (!valueChild) return null;
-                    return <ColorItem key={keyChild} name={key} shade={keyChild} hex={valueChild} />;
-                  })}
-                </div>
-                <div className="mb-1 uppercase text-xs tracking-wider font-semibold">{key}</div>
+              <div key={key} className="flex w-full items-center relative group">
+                <div className="w-32 absolute top-3 -left-32 uppercase text-xs tracking-wider">{key}</div>
+                {Object.entries(value).map(([keyChild, valueChild]) => {
+                  if (!valueChild) return null;
+                  return <ColorItem key={keyChild} name={key} shade={keyChild} hex={valueChild} />;
+                })}
               </div>
             );
           })}
@@ -77,7 +76,7 @@ const ColorItem = ({ name, shade, hex }: ColorItemProps) => {
         } group-hover:border-neutral-100`}
       ></div>
       {/* <span className="text-black capitalize mt-1 ml-2">{name}</span> */}
-      <span className="text-neutral-500 ml-2 mt-1 text-xs">{hex}</span>
+      <span className="text-neutral-500 ml-2 mt-1 text-xs ">{hex}</span>
     </div>
   );
 };

@@ -22,12 +22,4 @@ yarn dev
 npm run dev
 ```
 
-# Docs
-
-- [Basic UI components](/docs/basic-ui-components.md)
-- [Custom UI components](/docs/custom-ui-components.md)
-- [Create a UI Package](/docs/ui-package.md)
-- [API Mocking](/docs/mocking.md)
-- [Authentication](/docs/authentication.md)
-- [State management](/docs/state-management.md)
-- [Deploy with Docker](/docs/deployment.md)
+## How to deploy this app
