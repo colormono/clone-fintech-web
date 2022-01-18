@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import classNames from 'classnames';
 import { Heading, CustomLink } from '@/components/ui';
+import AssetsList from '@/components/coincap/List';
 
 const Page: NextPage = () => {
   return (
@@ -26,6 +27,8 @@ const Page: NextPage = () => {
           built for Sprint-01
         </h2>
       </div>
+
+      <AssetsList />
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-16">
         <Card title="👋 Getting started" description="How this template works, and how you can customize it." href="/docs" />

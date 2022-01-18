@@ -4,6 +4,10 @@ import DefaultPageLayout from '@/layouts/default';
 import ThemeUI from '@/components/ui/theme/ThemeUI';
 import '@/styles/globals.css';
 
+if (process.env.NEXT_PUBLIC_API_MOCKING === 'enabled') {
+  require('@/mocks');
+}
+
 type AppLayoutProps = AppProps & {
   Component: PageWithLayoutType;
   pageProps: any;

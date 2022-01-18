@@ -12,6 +12,9 @@ It follows the steps outlined in the official [Tailwind docs](https://tailwindcs
 - ⛑ Healt-checks: try the build since day one
 - 🐶 [Husky](https://github.com/typicode/husky): run lint before commit, run build before push
 
+- [AXIOS](https://axios-http.com/): Promise based HTTP client for the browser and node.js
+- [SWR](https://swr.vercel.app/): React Hooks for Data Fetching
+
 ## Getting Started
 
 After cloning the repo, install dependencies with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), then start the development env:
