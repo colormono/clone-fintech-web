@@ -1,5 +1,7 @@
 # Fintech Playground
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/bce79b8a-5134-480b-9928-5847fc8a2cd9/deploy-status)](https://app.netlify.com/sites/fintech-playground/deploys)
+
 This example shows how to use [TailwindCSS](https://tailwindcss.com/) with [Next.js](https://nextjs.org).
 It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs) and uses the new [`Just-in-Time Mode`](https://tailwindcss.com/docs/just-in-time-mode). [Mate-UI Components](https://mate-ui.truenorth.co) with [dark mode support](https://github.com/pacocoursey/next-themes)
 
