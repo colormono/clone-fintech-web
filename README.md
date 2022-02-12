@@ -1,4 +1,4 @@
-# Next.js + TailwindCSS Template
+# Fintech Playground
 
 This example shows how to use [TailwindCSS](https://tailwindcss.com/) with [Next.js](https://nextjs.org).
 It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs) and uses the new [`Just-in-Time Mode`](https://tailwindcss.com/docs/just-in-time-mode). [Mate-UI Components](https://mate-ui.truenorth.co) with [dark mode support](https://github.com/pacocoursey/next-themes)
